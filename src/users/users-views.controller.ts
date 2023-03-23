@@ -6,23 +6,23 @@ import { UsersService } from './users.service';
 @ApiTags('Views')
 @Controller()
 export class UsersViewsController {
-  constructor(private readonly usersService: UsersService) {}
+	constructor(private readonly usersService: UsersService) {}
 
-  @Get('users/login')
-  @Render('users/login')
-  root() {
-    return {};
-  }
+	@Get('users/login')
+	@Render('users/login')
+	root() {
+		return {};
+	}
 
-  @Get('users/signup')
-  @Render('users/signup')
-  signup() {
-    return {};
-  }
+	@Get('users/signup')
+	@Render('users/signup')
+	signup() {
+		return {};
+	}
 
-  @Post('users/signup')
-  @Render('users/login')
-  async register(@Body() createUserDto: CreateUserDto) {
-    await this.usersService.create(createUserDto);
-  }
+	@Post('users/signup')
+	@Render('users/login')
+	async register(@Body() createUserDto: CreateUserDto) {
+		await this.usersService.create(createUserDto);
+	}
 }

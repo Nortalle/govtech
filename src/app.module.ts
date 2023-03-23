@@ -7,7 +7,7 @@ import { AppController } from './app.controller';
 import { ConfigModule } from './config/config.module';
 
 @Module({
-  imports: [SpotsModule, PrismaModule, AuthModule, UsersModule, ConfigModule],
-  controllers: [AppController],
+	imports: [SpotsModule, PrismaModule, AuthModule, UsersModule, ConfigModule],
+	controllers: [AppController],
 })
 export class AppModule {}

@@ -5,56 +5,56 @@ import { UpdateSpotDto } from './dtos/update-spot-type.dto';
 
 @Injectable()
 export class SpotsService {
-  constructor(private readonly prisma: PrismaService) {}
+	constructor(private readonly prisma: PrismaService) {}
 
-  /** List spots */
-  async getSpots() {
-    return await this.prisma.spot.findMany();
-  }
+	/** List spots */
+	async getSpots() {
+		return await this.prisma.spot.findMany();
+	}
 
-  /** Read a spot by id */
-  async getSpot(spotId: string) {
-    const slideshow = await this.prisma.spot.findFirst({
-      where: {
-        id: {
-          equals: spotId,
-        },
-      },
-    });
+	/** Read a spot by id */
+	async getSpot(spotId: string) {
+		const slideshow = await this.prisma.spot.findFirst({
+			where: {
+				id: {
+					equals: spotId,
+				},
+			},
+		});
 
-    return slideshow;
-  }
-  /** Create a new spot */
-  async createSpot(createSpot: CreateSpotDto) {
-    const newSpot = await this.prisma.spot.create({
-      data: {
-        ...createSpot,
-      },
-    });
+		return slideshow;
+	}
+	/** Create a new spot */
+	async createSpot(createSpot: CreateSpotDto) {
+		const newSpot = await this.prisma.spot.create({
+			data: {
+				...createSpot,
+			},
+		});
 
-    return newSpot;
-  }
+		return newSpot;
+	}
 
-  /** Update a spot by id */
-  async updateSpot(spotId: string, updateSpot: UpdateSpotDto) {
-    const updatedSpot = await this.prisma.spot.update({
-      where: {
-        id: spotId,
-      },
-      data: {
-        ...updateSpot,
-      },
-    });
+	/** Update a spot by id */
+	async updateSpot(spotId: string, updateSpot: UpdateSpotDto) {
+		const updatedSpot = await this.prisma.spot.update({
+			where: {
+				id: spotId,
+			},
+			data: {
+				...updateSpot,
+			},
+		});
 
-    return updatedSpot;
-  }
+		return updatedSpot;
+	}
 
-  /** Delete a spot by id */
-  async deleteSpot(spotId: string) {
-    await this.prisma.spot.delete({
-      where: {
-        id: spotId,
-      },
-    });
-  }
+	/** Delete a spot by id */
+	async deleteSpot(spotId: string) {
+		await this.prisma.spot.delete({
+			where: {
+				id: spotId,
+			},
+		});
+	}
 }

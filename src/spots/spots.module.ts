@@ -6,8 +6,8 @@ import { SpotsViewsController } from './spots-views.controller';
 import { ConfigModule } from '@nestjs/config';
 
 @Module({
-  imports: [PrismaModule, ConfigModule],
-  providers: [SpotsService],
-  controllers: [SpotsApiController, SpotsViewsController],
+	imports: [PrismaModule, ConfigModule],
+	providers: [SpotsService],
+	controllers: [SpotsApiController, SpotsViewsController],
 })
 export class SpotsModule {}
