@@ -36,6 +36,10 @@ npm run dev
 
 And the app is running on <http://localhost:3000>.
 
+## Access the documentation
+
+The API documentation is on <http://localhost:3000/api>.
+
 ## Running the app
 
 ```bash
@@ -48,10 +52,6 @@ npm run dev
 # production mode
 npm run start:prod
 ```
-
-## Access the documentation
-
-The API documentation is on <http://localhost:3000/api>.
 
 ## Run the application for production
 
