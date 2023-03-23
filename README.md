@@ -23,7 +23,7 @@ Open this folder in Visual Studio Code, and open it in a dev contianer
 ```bash
 npm install
 
-cp .env.default .env
+cp .env.defaults .env
 
 # change DATABASE_SERVICE value to localhost in .env
 # change SPOT_IN_BACKEND_URL value to localhost:3000 in .env
@@ -33,6 +33,8 @@ docker-compose up -d database
 # watch mode
 npm run dev
 ```
+
+And the app is running on <http://localhost:3000>.
 
 ## Running the app
 
