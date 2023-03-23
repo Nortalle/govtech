@@ -31,7 +31,7 @@ cp .env.default .env
 docker-compose up -d database
 
 # watch mode
-npm run start:dev
+npm run dev
 ```
 
 ## Running the app
@@ -41,7 +41,7 @@ npm run start:dev
 npm run start
 
 # watch mode
-npm run start:dev
+npm run dev
 
 # production mode
 npm run start:prod
