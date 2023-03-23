@@ -14,7 +14,8 @@
 		"esbenp.prettier-vscode",
 		"ms-vsliveshare.vsliveshare",
 		"ms-azuretools.vscode-docker",
-		"GitHub.copilot"
+		"GitHub.copilot",
+		"EditorConfig.EditorConfig"
 	]
     }
   }
