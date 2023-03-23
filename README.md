@@ -56,6 +56,7 @@ npm run start:prod
 ## Run the application for production
 
 ```bash
+cp .env.defaults .env
 # Change variable in .env for your configuration
 
 docker compose build
